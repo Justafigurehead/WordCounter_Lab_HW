@@ -34,4 +34,14 @@ public class WordCounterTest {
         assertEquals(4, testSentence.getStringCount());
 
     }
+
+//    @Test
+//    public void testLongSentence(){
+//        testSentence.getWordOccur();
+//        testSentence.setInput("It was the best of times, it was the worst of times it was the age of wisdom it was the age of foolishness, it was the epoch of belief it was the epoch of incredulity");
+//        testSentence.getWordOccur();
+//        assertEquals(36, testSentence.getStringCount());
+//        testSentence.sortByValues;
+//    }
+
 }

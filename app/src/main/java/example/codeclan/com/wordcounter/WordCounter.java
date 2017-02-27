@@ -4,6 +4,7 @@ package example.codeclan.com.wordcounter;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class WordCounter {
 
@@ -23,6 +24,10 @@ public class WordCounter {
         return total;
     }
 
+    public String getInput() {
+        return input;
+    }
+
     public void setInput(String input) {
         this.input = input;
     }
@@ -30,7 +35,10 @@ public class WordCounter {
     public void getWordOccur() {
         // got help from: http://stackoverflow.com/questions/38751130/how-do-i-count-the-occurrences-of-each-word-in-each-of-sentences-stored-in-array
 
-        Map<String, Integer> wordCount = new LinkedHashMap<String, Integer>();
+        // LinkedHashMap is not sorted, it is ordered by order of insertion.
+
+
+        Map<String, Integer> wordCount = new LinkedHashMap<String, Integer>(); //LinkedHashMap allows it to be ordered by when the first occurs.
 
         String[] words = input.split(" "); //splitting the sentence input into an array of words
         for (String word : words) {  //searching through for loop to get word in words...
@@ -42,5 +50,7 @@ public class WordCounter {
             }
          System.out.println(wordCount.entrySet()); // we aren't returning anything here but we are printing to the screen.
         }
-    }
+
+
+}
 
