@@ -30,8 +30,11 @@ public class WordCounterActivity extends AppCompatActivity {
     public void countWhenClick(View Button){
         input = editTextBox.getText().toString();
         wordsToCount = new WordCounter(input);
-        int wordCount = wordsToCount.getWordOccur();
-
+        int wordCounts = wordsToCount.getStringCount();
+//        String wordCount = Integer.toString(wordCounts);
+        textViewBox.setText(Integer.toString(wordCounts));
+//        int wordCount = wordsToCount.getWordOccur();
+//        textViewBox.setText(wordsToCount.getWordOccur());
         Log.d("Button clicked",input);
     }
 }
